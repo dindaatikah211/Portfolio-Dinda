@@ -1,0 +1,309 @@
+/* RESET & FONTS */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffdfc;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  background-color: #fef3f7;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* FLEX HEADER FOR ALIGNMENT */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #d63384;
+}
+
+/* TOGGLE ICON */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #d63384;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* NAVIGATION */
+nav {
+  position: relative;
+  flex-shrink: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #d63384;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #a61e4d;
+}
+
+/* HERO SECTION */
+#hero {
+  background: linear-gradient(to right, #ffe6f0, #e0f7fa);
+  text-align: left;
+  padding: 30px 20px;
+  padding-left: 60px;
+}
+
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  color: #222;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin-left: 0;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.arrow-img {
+  width: 120px;
+  height: auto;
+  max-width: 100%;
+  position: relative;
+  right: 40px; /* geser ke kiri */
+  top: 10px;
+}
+
+.photo-img {
+  width: 350px;
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 0;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+  scroll-margin-top: 100px;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 1rem;
+  color: #444;
+  text-align: justify;;
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background-color: #fff0f6;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.project img {
+  width: 100%;
+  max-width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project h3 {
+  margin: 10px;
+  color: #c2185b;
+}
+
+.project p {
+  padding: 0 15px 20px;
+  color: #555;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+/* CONTACT */
+#contact p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* BUTTON KOTAK About Me, untuk semua ukuran layar */
+.cv-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background-color: #d63384;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  text-align: center;
+}
+
+.cv-button:hover {
+  background-color: #a61e4d;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVE NAVIGATION AND HERO */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #fef3f7;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  section {
+    scroll-margin-top: 130px;
+  }
+
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+   .hero-image {
+    justify-content: center;
+  }
+
+  .arrow-img {
+    display: none;
+  }
+
+  /* Jika perlu override tombol di mobile */
+  .cv-button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
