@@ -324,11 +324,10 @@ footer {
   }
 
   .photo-img {
-    width: 250px; /* ukuran gambar lebih kecil untuk HP */
+    width: 250px; 
     margin-top: 20px;
   }
 
-  /* Jika perlu override tombol di mobile */
   .cv-button {
     padding: 10px 20px;
     font-size: 0.9rem;
