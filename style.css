@@ -88,7 +88,7 @@ nav a:hover {
 #hero {
   background: linear-gradient(to right, #ffe6f0, #e0f7fa);
   text-align: left;
-  padding: 30px 20px;
+  padding: 30px 50px;
   padding-left: 60px;
 }
 
@@ -282,15 +282,37 @@ footer {
 
   section {
     scroll-margin-top: 130px;
+    padding: 40px 20px;
+  }
+
+  section p {
+    padding: 0 5px;
+    text-align: justify;
+  }
+
+  .container {
+    padding: 0 20px;
   }
 
   .hero-wrapper {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
+    padding: 20px;
   }
 
   .hero-text {
     text-align: center;
+  }
+
+  .hero-text h2 {
+    font-size: 2rem; /* agar tidak terlalu besar di layar kecil */
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 0 10px;
   }
 
    .hero-image {
@@ -299,6 +321,11 @@ footer {
 
   .arrow-img {
     display: none;
+  }
+
+  .photo-img {
+    width: 250px; /* ukuran gambar lebih kecil untuk HP */
+    margin-top: 20px;
   }
 
   /* Jika perlu override tombol di mobile */
