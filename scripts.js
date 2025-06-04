@@ -46,4 +46,5 @@ sections.forEach(section => {
   if (!section.classList.contains("visible")) {
     observer.observe(section);
   }
-});
+}
+);
