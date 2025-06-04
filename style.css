@@ -164,6 +164,7 @@ h2 {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   color: #222;
   margin-bottom: 20px;
+  color: #d63384;
 }
 
 section p {
@@ -173,6 +174,11 @@ section p {
 }
 
 /* PROJECTS */
+#projects {
+  padding: 60px 0;
+  text-align: center;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -211,6 +217,11 @@ section p {
 }
 
 /* CONTACT */
+#contact {
+  padding: 60px 0;
+  text-align: center;
+}
+
 #contact p {
   font-size: clamp(0.9rem, 1vw + 0.2rem, 1.05rem);
   margin: 10px 0;
@@ -223,6 +234,12 @@ footer {
   padding: 20px 0;
   font-size: clamp(0.8rem, 1vw, 1rem);
   color: #777;
+}
+
+/*ABOUT ME*/
+#about {
+  padding: 60px 0;
+  text-align: center;
 }
 
 /* BUTTON KOTAK */
@@ -245,6 +262,11 @@ footer {
 
 .cv-button:hover {
   background-color: #a61e4d;
+}
+
+.cv-wrapper {
+  text-align: left;
+  margin-top: 20px;
 }
 
 /* SOCIAL ICONS GLOBAL */
@@ -275,6 +297,11 @@ footer {
 }
 
 /* ORG SECTION */
+#organization {
+  padding: 60px 0;
+  text-align: center;
+}
+
 .org-card {
   display: flex;
   flex-direction: row;
@@ -299,13 +326,14 @@ footer {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  height: auto;
+  height: 100%; /* pastikan tinggi penuh */
+  min-height: 320px; /* opsional, agar gambar tidak terlalu pendek */
 }
 
 .org-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;      /* crop gambar agar selalu penuh */
   object-position: center;
   display: block;
 }
@@ -321,7 +349,8 @@ footer {
 .org-content h3 {
   font-size: clamp(1.2rem, 2.5vw, 1.5rem);
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  text-align: left; /* pastikan judul rata kiri */
 }
 
 .org-content p {
@@ -332,12 +361,13 @@ footer {
 
 .org-content ul {
   padding-left: 20px;
+  text-align: left; /* pastikan list rata kiri */
 }
 
 .org-content li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: clamp(0.85rem, 0.8vw + 0.3rem, 1rem);
-  line-height: 1.4;
+  text-align: left; /* pastikan point rata kiri */
 }
 
 /* 🎨 Pastel Background Colors */
@@ -357,6 +387,55 @@ footer {
 .org-card + .org-card {
   border-top: 1px solid #f8cde5;
   padding-top: 20px;
+}
+
+#certifications {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.certification-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.cert-card {
+  background-color: #f9c5c5;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  max-width: 300px;
+  width: 100%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+}
+
+.cert-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cert-card p {
+  font-weight: normal;   /* tidak bold */
+  font-size: 1rem;
+  text-align: center;    /* teks di tengah */
+}
+
+/* CERTIFICATION COLOR VARIANTS */
+.cert-pink {
+  background-color: #ffe6f0; 
+}
+
+.cert-blue {
+  background-color: #e0f7fa; 
 }
 
 /* RESPONSIVE */
@@ -495,4 +574,20 @@ footer {
   .org-content li {
     font-size: clamp(0.8rem, 0.9vw, 0.95rem);
   }
+  
+   .certification-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .cert-card {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .cert-card p {
+    font-size: clamp(0.9rem, 1vw + 0.3rem, 1rem);
+  }
+
 }
