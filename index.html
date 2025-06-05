@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
+<body class="page-index">
   <header>
     <div class="container header-flex">
       <h1 class="logo">Portfolio</h1>
@@ -61,10 +61,12 @@
       <h2>Organization</h2>
 
       <div class="org-card org-pink">
-        <img src="img/org1.png" alt="Electrical Engineering Student Association" class="org-image">
+        <div class="org-image">
+          <img src="img/org1.png" alt="Electrical Engineering Student Association">
+        </div>
         <div class="org-content">
           <h3>Electrical Engineering Student Association – Politeknik Negeri Semarang</h3>
-          <p><strong>Entrepreneurship and Sponsorship Division Staff</strong></p>
+          <p><strong>Entrepreneurship and Sponsorship Division Staff (2024 - 2025)</strong></p>
           <ul>
             <li>Lead designer and sponsorship coordinator within the division.</li>
             <li>Created promotional designs for entrepreneurship events.</li>
@@ -75,10 +77,12 @@
       </div>
 
       <div class="org-card org-purple">
-        <img src="img/org2.png" alt="Google Developer Student Club" class="org-image">
+        <div class="org-image">
+          <img src="img/org2.png" alt="Google Developer Student Club">
+        </div>
         <div class="org-content">
           <h3>Google Developer Student Club Chapter Polines</h3>
-          <p><strong>Active Member</strong></p>
+          <p><strong>Active Member (2023 - Present)</strong></p>
           <ul>
             <li>Participated in GDSC learning and development activities.</li>
             <li>Attended training on web development, UI/UX, and mobile apps.</li>
@@ -88,10 +92,12 @@
       </div>
 
       <div class="org-card org-blue">
-        <img src="img/org3.png" alt="Polytechnic Computer Club" class="org-image">
+        <div class="org-image">
+          <img src="img/org3.png" alt="Polytechnic Computer Club">
+        </div>
         <div class="org-content">
           <h3>Polytechnic Computer Club</h3>
-          <p><strong>Active Member</strong></p>
+          <p><strong>Active Member  (2023 - 2024)</strong></p>
           <ul>
             <li>Joined UI/UX training using Figma as a participant.</li>
             <li>Learned wireframing and prototyping in Figma.</li>
@@ -102,19 +108,25 @@
   </section>
 
   <section id="projects">
-    <div class="container">
+    <div class="project-categories">
       <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project">
-          <img src="assets/project1.jpg" alt="Project 1" />
-          <h3>Project One</h3>
-          <p>Landing page for product showcase with responsive layout.</p>
-        </div>
-        <div class="project">
-          <img src="assets/project2.jpg" alt="Project 2" />
-          <h3>Project Two</h3>
-          <p>Mobile-friendly portfolio site built with modern web technologies.</p>
-        </div>
+      <div class="categories-grid">
+        <a href="projects/frontend.html" class="category-card">
+          <img src="img/frontend.png" alt="Front End" />
+          <p>Front End</p>
+        </a>
+        <a href="projects/uiux.html" class="category-card">
+          <img src="img/uiux.png" alt="UI UX" />
+          <p>UI / UX</p>
+        </a>
+        <a href="projects/design.html" class="category-card">
+          <img src="img/design.png" alt="Design Graphic" />
+          <p>Design Graphic</p>
+        </a>
+        <a href="projects/others.html" class="category-card">
+          <img src="img/others.png" alt="Others" />
+          <p>Others</p>
+        </a>
       </div>
     </div>
   </section>

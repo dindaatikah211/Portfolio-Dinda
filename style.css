@@ -91,7 +91,69 @@ nav a:hover {
 #hero {
   background: linear-gradient(to right, #ffe6f0, #e0f7fa);
   text-align: left;
-  padding: 30px 20px;
+  padding: 50px 20px;
+}
+
+/* Khusus halaman Frontend */
+.page-frontend #hero {
+  background: linear-gradient(to right, #ffe6f0, #e0f7fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh; /* agar vertikal tengah */
+  padding: 20px;
+}
+
+.page-frontend #hero h2 {
+  color: #d63384;
+  text-align: center;
+}
+
+/* Khusus halaman UI/UX */
+.page-uiux #hero {
+  background: linear-gradient(to right, #ffe6f0, #e0f7fa);
+  text-align: center;
+  padding: 80px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh; /* agar vertikal tengah */
+  padding: 20px;
+}
+
+.page-uiux #hero h2 {
+  color: #d63384;
+  text-align: center;
+}
+
+/* Halaman Design */
+.page-design #hero {
+  background: linear-gradient(to right, #ffe6f0, #e0f7fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh; /* agar vertikal tengah */
+  padding: 20px;
+}
+
+.page-design #hero h2 {
+  color: #d63384;
+  text-align: center;
+}
+
+/* Halaman Others */
+.page-others #hero {
+  background: linear-gradient(to right, #ffe6f0, #e0f7fa);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh; /* agar vertikal tengah */
+  padding: 20px;
+}
+
+.page-others #hero h2 {
+  color: #d63384;
+  text-align: center;
 }
 
 .hero-wrapper {
@@ -177,43 +239,55 @@ section p {
 #projects {
   padding: 60px 0;
   text-align: center;
+  background-color: #ffe6f0;
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.project {
-  background-color: #fff0f6;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+.project-categories {
   text-align: center;
-  transition: transform 0.3s;
+  margin-bottom: 1rem;
 }
 
-.project img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+.section-subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #d63384;
+  font-weight: 600;
 }
 
-.project h3 {
-  margin: 10px;
-  color: #c2185b;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+.categories-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.project p {
-  padding: 0 15px 20px;
-  color: #555;
-  font-size: clamp(0.9rem, 1vw + 0.2rem, 1.05rem);
+.category-card {
+  background: white;
+  border-radius: 15px;
+  padding: 0.7rem;
+  width: 220px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.project:hover {
+.category-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.category-card img {
+  width: 200px;
+  height: 180px;
+  object-fit: contain;
+}
+
+.category-card p {
+  font-weight: 600;
+  color: #d63384;
+  text-align: center;
+  padding: 20px 0;
 }
 
 /* CONTACT */
@@ -240,6 +314,13 @@ footer {
 #about {
   padding: 60px 0;
   text-align: center;
+}
+
+#about h2 {
+  margin-top: 0; /* Menghilangkan margin atas jika ada */
+}
+#about p {
+  margin-top: 10px; /* Menambahkan ruang di atas paragraf */
 }
 
 /* BUTTON KOTAK */
@@ -304,15 +385,10 @@ footer {
 
 .org-card {
   display: flex;
-  flex-direction: row;
-  background-color: #fff;
   border-radius: 20px;
-  margin: 30px 0;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
-  overflow: hidden; /* ✅ penting agar gambar ter-clipping sesuai sudut kartu */
-  transition: transform 0.3s ease;
-  flex-wrap: nowrap;
-  align-items: stretch;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
 }
 
 .org-card:hover {
@@ -321,53 +397,50 @@ footer {
 }
 
 .org-image {
-  flex: 1.2;
-  overflow: hidden;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  height: 100%; /* pastikan tinggi penuh */
-  min-height: 320px; /* opsional, agar gambar tidak terlalu pendek */
+  flex: 0.6;
+  position: relative;
+  min-height: 100%;
+  max-width: 50%;
 }
 
 .org-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;      /* crop gambar agar selalu penuh */
+  object-fit: cover;
   object-position: center;
   display: block;
 }
 
 .org-content {
-  flex: 2;
-  padding: 25px;
+  flex: 1.8;
+  padding: 1.8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .org-content h3 {
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
   font-weight: 600;
   margin-bottom: 12px;
-  text-align: left; /* pastikan judul rata kiri */
+  text-align: left;
 }
 
 .org-content p {
   font-weight: 500;
   margin-bottom: 12px;
-  font-size: clamp(0.95rem, 1vw + 0.2rem, 1.1rem);
+  font-size: clamp(0.85rem, 0.9vw + 0.2rem, 1rem);
 }
 
 .org-content ul {
   padding-left: 20px;
-  text-align: left; /* pastikan list rata kiri */
+  text-align: left;
 }
 
 .org-content li {
-  margin-bottom: 12px;
-  font-size: clamp(0.85rem, 0.8vw + 0.3rem, 1rem);
-  text-align: left; /* pastikan point rata kiri */
+  margin-bottom: 10px;
+  font-size: clamp(0.8rem, 0.8vw + 0.2rem, 0.95rem);
+  text-align: left;
 }
 
 /* 🎨 Pastel Background Colors */
@@ -386,7 +459,6 @@ footer {
 /* Divider antar org-card */
 .org-card + .org-card {
   border-top: 1px solid #f8cde5;
-  padding-top: 20px;
 }
 
 #certifications {
@@ -427,6 +499,7 @@ footer {
   font-weight: normal;   /* tidak bold */
   font-size: 1rem;
   text-align: center;    /* teks di tengah */
+  padding: 5px;
 }
 
 /* CERTIFICATION COLOR VARIANTS */
@@ -436,6 +509,21 @@ footer {
 
 .cert-blue {
   background-color: #e0f7fa; 
+}
+
+.breadcrumb {
+  font-size: 17px;
+  margin: 5px 20px;
+  color: #d63384;
+}
+
+.breadcrumb a {
+  color: #d63384;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
 }
 
 /* RESPONSIVE */
@@ -483,7 +571,8 @@ footer {
   }
 
   .container {
-    padding: 0 20px;
+    max-width: 100%; /* Memastikan kontainer mengisi layar */
+    padding: 20px; /* Padding tetap menggunakan piksel */
   }
 
   #hero {
@@ -505,7 +594,7 @@ footer {
 
   .hero-text {
     text-align: center;
-    max-width: 100%;
+    max-width: 90%;
     padding: 0 16px;
     box-sizing: border-box;
   }
@@ -544,41 +633,36 @@ footer {
     margin: 0 3px;
   }
 
- .org-card {
+  .org-card {
     flex-direction: column;
   }
 
   .org-image {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
+    height: 220px;
   }
 
   .org-image img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 0;
+    height: 100%;
   }
 
   .org-content {
-    padding: 20px;
+    padding: 18px 14px;
   }
 
   .org-content h3 {
-    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
   }
 
-  .org-content li {
+  .org-content li,
+  .org-content p {
     font-size: clamp(0.8rem, 0.9vw, 0.95rem);
   }
   
-   .certification-grid {
+  .certification-grid {
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
   }
 
   .cert-card {
@@ -588,6 +672,11 @@ footer {
 
   .cert-card p {
     font-size: clamp(0.9rem, 1vw + 0.3rem, 1rem);
+    padding: 7px;
+  }
+
+  .breadcrumb {
+    display: none;
   }
 
 }
