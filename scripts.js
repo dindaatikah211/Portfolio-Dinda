@@ -3,13 +3,18 @@
 // Tampilkan pesan di console
 console.log("Welcome to Dinda's Portfolio Website");
 
-// Smooth scroll untuk anchor
+// Smooth scroll untuk anchor + update hash di URL
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
+    const targetID = this.getAttribute('href');
+    const target = document.querySelector(targetID);
+    if (target) {
+      history.pushState(null, null, targetID); // Update hash di URL
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
   });
 });
 
@@ -21,8 +26,6 @@ toggle.addEventListener('click', () => {
   navMenu.classList.toggle('active');
 });
 
-toggle.classList.toggle('active');
-
 // Tutup menu saat item diklik
 document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', () => {
@@ -30,9 +33,10 @@ document.querySelectorAll('nav a').forEach(link => {
   });
 });
 
-// Animasi muncul saat scroll (optional)
+// Animasi muncul saat scroll
 const sections = document.querySelectorAll("section");
 const options = { threshold: 0.1 };
+
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -46,5 +50,4 @@ sections.forEach(section => {
   if (!section.classList.contains("visible")) {
     observer.observe(section);
   }
-}
-);
+});
