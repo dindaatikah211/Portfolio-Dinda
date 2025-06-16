@@ -154,10 +154,19 @@
   </section>
 
   <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>📧 <a href="mailto:dindaatikahh@gmail.com" target="_blank">dindaatikahh@gmail.com</a></p>
-      <p>📸 <a href="https://instagram.com/txdinda" target="_blank">@txdinda</a></p>
+    <div class="container contact-wrapper">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-content">
+        <div class="contact-image">
+          <img src="img/contact.png" alt="Contact">
+        </div>
+        <form class="contact-form" action="https://formspree.io/f/mldnnoee" method="POST">
+          <input type="text" name="name" placeholder="Full Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea name="message" rows="4" placeholder="Message" required></textarea>
+          <button type="submit" class="contact-btn">Contact Me</button>
+        </form>
+      </div>
     </div>
   </section>
 
