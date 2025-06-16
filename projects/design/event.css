@@ -248,15 +248,11 @@ section p {
   text-decoration: none;
 }
 
-.project-box.pink .project-text h3,
-.project-box.pink .project-text p,
-.project-box.pink .project-text a {
+.project-box.pink .project-text h3 {
   color: #d63384; 
 }
 
-.project-box.blue .project-text h3,
-.project-box.blue .project-text p,
-.project-box.blue .project-text a {
+.project-box.blue .project-text h3{
   color: #276ded; 
 }
 
