@@ -163,10 +163,10 @@ section p {
   content: '';
   position: absolute;
   width: 2px;
-  top: 15%;
+  top: 12%;
   bottom: 0%;
   left: 50%;
-  transform: translate(-50%, -8%);
+  transform: translate(-50%, -7%);
   background-image: repeating-linear-gradient(
     to bottom,
     #d63384,
@@ -378,10 +378,10 @@ footer {
     );
     transform: translateX(-50%);
     z-index: 1;
-    top: 46%;
-    bottom: 0;
+    top: 18%;
+    bottom: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -10%);
   }
 
   .custom-projects .project-box:not(:last-child)::after {

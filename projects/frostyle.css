@@ -163,10 +163,10 @@ section p {
   content: '';
   position: absolute;
   width: 2px;
-  top: 28%;
-  bottom: 3%;
+  top: 22%;
+  bottom: 8%;
   left: 50%;
-  transform: translate(-50%, -20%);
+  transform: translate(-50%, -10%);
   background-image: repeating-linear-gradient(
     to bottom,
     #d63384,
@@ -221,16 +221,10 @@ section p {
   flex-direction: row;
 }
 
-.project-box.red {
-  align-self: flex-end;
-  background-color: #fed8da;
-  flex-direction: row-reverse;
-}
-
 .project-box.blue {
-  align-self: flex-start;
+  align-self: flex-end;
   background-color: #e3f0ff;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 
 .project-text {
@@ -258,12 +252,6 @@ section p {
 .project-box.pink .project-text p,
 .project-box.pink .project-text a {
   color: #d63384; 
-}
-
-.project-box.red .project-text h3,
-.project-box.red .project-text p,
-.project-box.red .project-text a {
-  color: #8b0206; 
 }
 
 .project-box.blue .project-text h3,
@@ -390,10 +378,10 @@ footer {
     );
     transform: translateX(-50%);
     z-index: 1;
-    top: 46%;
-    bottom: 0;
+    top: 18%;
+    bottom: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -10%);
   }
 
   .custom-projects .project-box:not(:last-child)::after {
