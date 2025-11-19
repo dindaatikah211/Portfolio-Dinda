@@ -164,7 +164,7 @@ section p {
   position: absolute;
   width: 2px;
   top: 22%;
-  bottom: 8%;
+  bottom: 10%;
   left: 50%;
   transform: translate(-50%, -10%);
   background-image: repeating-linear-gradient(
