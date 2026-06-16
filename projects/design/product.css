@@ -163,10 +163,10 @@ section p {
   content: '';
   position: absolute;
   width: 2px;
-  top: 26%;
-  bottom: 3%;
+  top: 22%;
+  bottom: 6%;
   left: 50%;
-  transform: translate(-50%, -20%);
+  transform: translate(-40%, -10%);
   background-image: repeating-linear-gradient(
     to bottom,
     #d63384,
